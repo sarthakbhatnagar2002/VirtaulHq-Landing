@@ -8,3 +8,14 @@
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+  overflow: hidden; 
+  overflow-y: auto; 
+}
