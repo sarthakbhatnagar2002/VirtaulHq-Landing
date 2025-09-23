@@ -1,32 +1,55 @@
-import { CheckCircle2 } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import hqImg from "../assets/hqmage.jpg";
 import { checklistItems } from "../constants";
 
 const Workflow = () => {
+
   return (
-    <div className="mt-20">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-      Boost Your Development Speed and Efficiency with {" "}
-        <span className="bg-gradient-to-r from-pink-200 to-pink-500 text-transparent bg-clip-text">
-        VirtualHQ's Seamless Tools
-        </span>
-      </h2>
-      <div className="flex flex-wrap justify-center">
-        <div className="p-2 w-full lg:w-1/2">
-          <img src={hqImg} alt="VirtualHq" />
+    <div className="relative py-20 overflow-hidden bg-gradient-to-r from-gray-950 to-black">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-cyan-300 drop-shadow-[2px_2px_0px_#0f172a]">
+            Boost Your Dev Speed with{" "}
+            <span className="text-blue-400">VirtualHQ's Pixel Tools</span>
+          </h2>
         </div>
-        <div className="pt-12 w-full lg:w-1/2">
-          {checklistItems.map((item, index) => (
-            <div key={index} className="flex mb-12">
-              <div className="text-green-400 mx-6 h-10 w-10 p-2 justify-center items-center rounded-full">
-                <CheckCircle2/>
-              </div>
-              <div>
-                <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                <p className=" text-neutral-500">{item.description}</p>
-              </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Pixel Image */}
+          <div className="relative group">
+            <div className="relative overflow-hidden rounded-none border-4 border-blue-500 shadow-[8px_8px_0px_#1e3a8a]">
+              <img
+                src={hqImg}
+                alt="VirtualHQ Workspace"
+                className="w-full h-auto"
+              />
             </div>
-          ))}
+          </div>
+
+          {/* Pixel Features */}
+          <div className="space-y-8">
+            {checklistItems.map((item, index) => (
+              <div
+                key={index}
+                className="group flex items-start gap-6 p-6 rounded-none border-2 border-blue-500 bg-neutral-900 shadow-[4px_4px_0px_#1e40af] hover:scale-105 transition-transform duration-300"
+              >
+                {/* Pixel Check Icon */}
+                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center text-white font-bold text-lg shadow-[2px_2px_0px_#0f172a]">
+                  ✓
+                </div>
+
+                <div className="flex-1">
+                  <h5 className="text-xl font-bold text-cyan-300 drop-shadow-[2px_2px_0px_#0f172a] mb-2">
+                    {item.title}
+                  </h5>
+                  <p className="text-neutral-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
