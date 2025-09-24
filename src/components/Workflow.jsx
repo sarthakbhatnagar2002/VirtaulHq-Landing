@@ -27,7 +27,7 @@ const Workflow = () => {
             {checklistItems.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-6 p-6 rounded-none border-2 border-blue-500 bg-neutral-900 shadow-[4px_4px_0px_#1e40af] hover:scale-105 transition-transform duration-300"
+                className="flex gap-6 p-6 rounded-none border-2 border-blue-500 bg-neutral-900 cursor-pointer shadow-[4px_4px_0px_#1e40af] hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-lg">
                   ✓
