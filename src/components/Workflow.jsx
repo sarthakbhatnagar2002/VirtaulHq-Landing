@@ -1,11 +1,10 @@
-import { Sparkles } from "lucide-react";
 import hqImg from "../assets/hqmage.jpg";
 import { checklistItems } from "../constants";
 
 const Workflow = () => {
 
   return (
-    <div className="relative py-20 overflow-hidden bg-gradient-to-r from-gray-950 to-black">
+    <div className="relative py-20 overflow-hidden bg-gradient-to-r from-gray-950 to-black font-mono">
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-cyan-300 drop-shadow-[2px_2px_0px_#0f172a]">
@@ -13,10 +12,7 @@ const Workflow = () => {
             <span className="text-blue-400">VirtualHQ's Pixel Tools</span>
           </h2>
         </div>
-
-        {/* Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Pixel Image */}
           <div className="relative group">
             <div className="relative overflow-hidden rounded-none border-4 border-blue-500 shadow-[8px_8px_0px_#1e3a8a]">
               <img
@@ -27,15 +23,13 @@ const Workflow = () => {
             </div>
           </div>
 
-          {/* Pixel Features */}
           <div className="space-y-8">
             {checklistItems.map((item, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-6 p-6 rounded-none border-2 border-blue-500 bg-neutral-900 shadow-[4px_4px_0px_#1e40af] hover:scale-105 transition-transform duration-300"
+                className="flex gap-6 p-6 rounded-none border-2 border-blue-500 bg-neutral-900 shadow-[4px_4px_0px_#1e40af] hover:scale-105 transition-transform duration-300"
               >
-                {/* Pixel Check Icon */}
-                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center text-white font-bold text-lg shadow-[2px_2px_0px_#0f172a]">
+                <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-lg">
                   ✓
                 </div>
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Globe } from "lucide-react";
+import logo from "../assets/Logo.png"
 import { resourcesLinks, platformLinks, communityLinks } from "../constants";
 
 const Footer = () => {
@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-blue-800">
           <div className="flex items-center mb-4 md:mb-0">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-none flex items-center justify-center mr-3">
-              <Globe className="w-4 h-4 text-white" />
+              <img className="w-16" src={logo} alt="logo" />
             </div>
             <span className="font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               VirtualHQ
